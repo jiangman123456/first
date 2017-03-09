@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="box">
+			{{mag}}
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el:"#box",
+			data:{
+				mag:"well"
+			},
+			created:function(){
+				alert("实例已经创建");
+			},
+			beforeCompile:function(){
+				alert("bianyizhiqian");
+				
+			},
+			compiled:function(){
+				alert("xiaohuizhiqian");	
+			},
+			ready:function(){
+				alert("charudaowendangzhong");
+			}
+			beforeDestroy:function(){
+				alert("xiaohuizhiqian");
+			},
+			destroyed:function(){
+				alert("xiaohuizhihou");
+			}
+		});
+		
+		
+	</script>
+</html>
